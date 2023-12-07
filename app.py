@@ -12,10 +12,11 @@ def voice():
 
     # Read a message aloud to the caller
     resp.say("Hello!")
-    resp.Gather(input = "speech")
+    gather = Gather(input = "speech")
+    
     
 
-    return str(resp)
+    return str(gather)
 
 # if __name__ == "__main__":
 #     app.run(debug=True)
