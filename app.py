@@ -1,5 +1,5 @@
 from flask import Flask
-from twilio.twiml.voice_response import VoiceResponse
+from twilio.twiml.voice_response import VoiceResponse, Gather
 
 app = Flask(__name__)
 
@@ -11,7 +11,9 @@ def voice():
     resp = VoiceResponse()
 
     # Read a message aloud to the caller
-    resp.say("Hello world!")
+    resp.say("Hello!")
+    resp.Gather(input = "speech")
+    
 
     return str(resp)
 

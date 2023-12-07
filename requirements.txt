@@ -1,3 +1,6 @@
 Flask
 Gunicorn
 twilio
+tensorflow
+nltk
+numpy
